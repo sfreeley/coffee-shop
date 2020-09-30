@@ -5,6 +5,11 @@ button.addEventListener("click", () => {
     getAllBeanVarieties()
         .then(beanVarieties => {
             console.log(beanVarieties);
+            for (let variety of beanVarieties) {
+                document.querySelector(".beanVarieties").innerHTML +=
+                    `<li>${variety.name}</li>`
+            }
+
         })
 });
 
