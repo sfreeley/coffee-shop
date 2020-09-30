@@ -7,11 +7,34 @@
 
 
 <body>
-    <button id="run-button">Run It!</button>
     <h4>Bean Varieties</h4>
-    <ul class="beanVarieties">
+    <button id="run-button">Run It!</button>
+    <button id="showBeanForm-button">Add New Bean Variety</button>
+    <div class="newBeanForm hidden">
+        <form action="api/beanvariety/" method="POST">
 
-    </ul>
+            <fieldset class="flex-item">
+                <label class="inputLabel" for="name">Name of Bean Variety</label>
+                <input type="text" id="name" name="name" width="20" required>
+            </fieldset>
+
+            <fieldset class="flex-item">
+                <label class="inputLabel" for="region">Region</label>
+                <input type="text" id="region" name="region" width="20" required>
+            </fieldset>
+
+            <fieldset class="flex-item">
+                <label class="inputLabel" for="notes">Notes</label>
+                <textarea id="notes" name="notes"></textarea>
+            </fieldset>
+        </form>
+        <div>
+            <button id="postVarietyButton" type="submit">Record New Bean Variety</button>
+        </div>
+    </div>
+
+
+    <ul class="beanVarieties"></ul>
 
     <script src="main.js"></script>
 </body>
